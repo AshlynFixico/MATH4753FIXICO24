@@ -1,11 +1,11 @@
 #' Hypergeometric Function
 #'
-#' @param iter
-#' @param N
-#' @param r
-#' @param n
+#' @param iter number of iterations
+#' @param N number of data points
+#' @param r number of successful points
+#' @param n number of sample points
 #'
-#' @return
+#' @return a set of graphs
 #' @export
 #'
 #' @examples

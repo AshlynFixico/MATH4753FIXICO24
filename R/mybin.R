@@ -1,10 +1,10 @@
 #' Binary Function
 #'
-#' @param iter
-#' @param n
-#' @param p
+#' @param iter number of iterations
+#' @param n number of samples
+#' @param p probability of success
 #'
-#' @return
+#' @return a barplot of probabilities given values
 #' @export
 #'
 #' @examples
