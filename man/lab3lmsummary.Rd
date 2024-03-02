@@ -16,5 +16,6 @@ numerical vector output
 Lab 3 Linear Model Summary Coefficients
 }
 \examples{
+mydata.lm = NULL
 lab3lmsummary(x=mydata.lm)
 }

@@ -6,6 +6,7 @@
 #' @export
 #'
 #' @examples
+#' mydata.lm = NULL
 #' lab3lmsummary(x=mydata.lm)
 lab3lmsummary <- function(x){
   stats::coef(x)

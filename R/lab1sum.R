@@ -6,7 +6,7 @@
 #' @export
 #'
 #' @examples
-#' lab1sum(x = dataset)
+#' lab1sum(x = c(1,2,3,4,5))
 lab1sum <- function(x) {
   summary(x)
   }

@@ -16,5 +16,5 @@ a numerical vector
 Lab 2 Z Value
 }
 \examples{
-lab2class(x=data$column)
+lab2zvalue(x=c(1,2,3,4,5))
 }

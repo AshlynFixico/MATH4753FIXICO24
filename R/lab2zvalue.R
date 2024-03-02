@@ -6,7 +6,7 @@
 #' @export
 #'
 #' @examples
-#' lab2class(x=data$column)
+#' lab2zvalue(x=c(1,2,3,4,5))
 lab2zvalue = function(x){
   (x-mean(x))/stats::sd(x)
   }

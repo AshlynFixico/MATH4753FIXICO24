@@ -16,5 +16,5 @@ a summary of variables in the data set
 Lab 1 Summary Function
 }
 \examples{
-lab1sum(x = dataset)
+lab1sum(x = c(1,2,3,4,5))
 }
