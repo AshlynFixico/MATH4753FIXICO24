@@ -14,7 +14,7 @@ myncurve = function(a, mu, sigma){
   curve(dnorm(x,mean=mu,sd=sigma), xlim = c(mu-3*sigma, mu + 3*sigma))
   xcurve = seq((mu-3*sigma), a, length = 1000)
   ycurve = dnorm(xcurve, mean = mu, sd = sigma)
-  polygon(c(mu-3*sigma, xcurve, a), c(0,ycurve,0), col = NULL)
+  polygon(c(mu-3*sigma, xcurve, a), c(0,ycurve,0), col = "hotpink")
 
   prob = (pnorm(a, mean=mu, sd= sigma))
   prob = round(prob, 4)
