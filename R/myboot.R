@@ -21,7 +21,7 @@ myboot<-function(iter=10000,x,fun="mean",alpha=0.05,cx=1.5,...){
   ci=quantile(xstat,c(alpha/2,1-alpha/2))# Nice way to form a confidence interval
   # A histogram follows
   # The object para will contain the parameters used to make the histogram
-  para=hist(xstat,freq=FALSE,las=1,
+  para=hist(xstat,freq=FALSE,las=1, xlab = fun,
             main=paste("Histogram of Bootstrap sample statistics","\n","alpha=",alpha," iter=",iter,sep=""),
             ...)
 
