@@ -1,0 +1,144 @@
+---
+title: "What the Package Does"
+output: 
+  rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{What the Package Does}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(MATH4753FIXICO24)
+```
+
+# Introduction
+
+The MATH4753 Package is a compilation of various functions used throughout the MATH4753 Course.
+
+## lab1sum Function
+
+The lab1sum function is the same as the default R summary() function, included into the package as a means of practicing adding new functions.
+
+It takes a data set input, and provides a summary of the variables included within that data set.
+
+```{r}
+lab1sum(fire)
+```
+
+
+## lab2zvalue Function
+
+Added as further practice during lab 2 of the course, the lab2zvalue function takes a vector input of a data set, and returns the z values of each value in that vector. 
+
+```{r}
+lab2zvalue(fire$DAMAGE)
+```
+
+## lab3lmsummary Function
+
+Added during lab 3 of the course, the lab3lmsummary function takes an input of a linear model, and returns the coefficients of the summary of that model.
+
+```{r}
+z<- lm(fire$DAMAGE~fire$DISTANCE)
+lab3lmsummary(z)
+```
+
+
+## lab4quad Function
+
+Added during lab 4 of the course, the lab4quad function was created for practice in defining non-prebuilt functions. It takes an input of a numerical vector, and applies it to a pre-determined quadratic formula utilized in lab 4, then returns the numerical output produced by applying the function to the vector.
+
+```{r}
+lab4quad(4)
+```
+
+## mybin Function
+
+Added during lab 5, the mybin function was written by Dr. Stewart, and added to the package as practice in package building. It takes 3 numerical inputs, of the number of iterations the function is to run for, the number of sample points, and the probability of success for each of these sample points, assuming a binomial distribution. It then simulates a sampling of the described binomial distribution for the number of iterations provided, and returns a barplot of the simulated distribution of successes.
+
+```{r}
+mybin(iter = 100, n = 10, p = 0.5)
+```
+
+
+## mycltb Function
+
+Added during lab 8, the mycltb function was written by Dr. Stewart and added to the package as package building practice. It utilizes the central limit theorem, and takes inputs of values needed to produce a binomial distribution, and an input of iterations, to repeatedly sample a binomial distribution and return a histogram of the new, iteration sampled distribution.
+
+```{r}
+mycltb(n = 20, iter = 100, p = 0.5)
+```
+
+
+## myhyper Function
+
+Added during lab 5, the myhyper function was written by Dr. Stewart and added to the package as package building practice. It takes 4 numerical inputs, "iter" the number of iterations it is to run over, "n" the number sampled, "N" the total number of data points that could be sampled, and "r" the number of data points in the total considered "successes." It then simulates a hypergeometric distribution obtained from sampling the described distribution iter times, and returns a barplot of the new distribution.
+
+```{r}
+myhyper()
+```
+
+
+
+## mymlnorm Function
+
+Added during lab 10, the mymlnorm function written by Dr. Stewart takes an input of a sample vector, a mu numeric vector of potential values, and a sig numeric vector of potential values, and returns a visual plot of the log likelihoods of two parameters, with the most likely estimates highlighted by a set of intersecting lines on the plot.
+
+```{r}
+mymlnorm(x=c(10,12,13,15,12,11,10),mu=seq(7,18,length=1000),sig=seq(0.1,4,length=1000),lwd=2,labcex=1)
+```
+
+
+## myboot function
+
+Added during lab 9, the by boot function written by Dr. Stewart takes arguments of iter, a data set, a predefined function, alpha, and cx, and bootstraps the data set for the provided number of iterations. It then returns a histogram of the bootstrapped distribution, as well as a list of the bootstrap qualities displayed by the histogram.
+
+```{r}
+x = myboot(x = fire$DAMAGE)
+```
+
+
+
+## myncurve Function
+
+Added during lab 6, the myncurve function written by Dr. Stewart takes an input of three numeric values, a given value of x, a mean, and a standard deviation. It then plots the normal distribution of the given values, highlighting the area under that curve up to the value of x, and returns that plot along with a list of values, including the provided mean and standard deviation, as well as the calculated area under the curve up to the given x value.
+
+```{r}
+myncurve(1,2,3)
+```
+
+
+## myquad Function
+
+Added as practice in package building, the myquad function takes a numeric input and plugs it into a quadratic function of predefined coefficient, returning the numeric value the function evaluates to.
+
+```{r}
+myquad(10)
+```
+
+
+## ntickets Function
+
+Added during project 1, the ntickets function calculates the number of tickets to be sold by an airline in order to optimize ticket sales, given a certain probability of flyers who show up, the number of available seats on a plane, and the probability of a risk of overbooking the flight.
+
+
+```{r}
+ntickets()
+```
+
+## fire data
+
+Added during lab 7, the fire data set is the FIREDAM data set taken from our course textbook, describing a sample of fire damage as a function of distance from the nearest fire station.
+
+```{r}
+head(fire)
+```
+
